@@ -172,119 +172,245 @@
           </div>
 
           <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="image-wrapper">
-                <!-- Gambar hanya muncul di layar dengan lebar 1100px ke atas -->
-                <div class="images position-relative d-none d-xl-block" data-aos="zoom-out" data-aos-delay="400">
-                  <img src="assets/img/wm.png" alt="Tim artWeb" class="img-fluid main-image rounded-4">
-                  <img src="assets/img/favicon.png" alt="Diskusi Tim" class="img-fluid small-image rounded-4">
-                </div>
-            
-                <!-- Promo Badge -->
-                <div class="promo-badge floating">
-                  <button class="close-btn" onclick="closePromo()">×</button><br>
-                  <h3>Promo Spesial!</h3>
-                  <p>🔥 Konsultasi <strong>GRATIS</strong>!</p>
-                  <p>✨ Revisi <strong>SEPUASNYA</strong>!</p>
-                  <p>💸 Harga Bisa di <strong>NEGO</strong></p>
-                  <p class="highlight">Jangan lewatkan kesempatan ini!</p>
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <!-- Konten Menarik -->
+                <div class="content-wrapper">
+                  <div class="animated-text">
+                    <h3 class="text-gradient">Membangun Masa Depan Digital Anda</h3>
+                    <p class="text-subtitle">Dengan solusi teknologi terkini, kami siap membantu bisnis Anda tumbuh lebih cepat.</p>
+                  </div>
+                  <div class="interactive-icons">
+                    <div class="icon-item" data-aos="fade-up" data-aos-delay="500">
+                      <i class="bi bi-rocket-takeoff icon-large"></i>
+                      <p>Percepat Bisnis Anda</p>
+                    </div>
+                    <div class="icon-item" data-aos="fade-up" data-aos-delay="600">
+                      <i class="bi bi-lightbulb icon-large"></i>
+                      <p>Ide Kreatif & Inovatif</p>
+                    </div>
+                    <div class="icon-item" data-aos="fade-up" data-aos-delay="700">
+                      <i class="bi bi-bar-chart icon-large"></i>
+                      <p>Tingkatkan Performa</p>
+                    </div>
+                  </div>
+                  <div class="inspirational-quote">
+                    <blockquote>
+                      "Teknologi adalah alat untuk mengubah mimpi menjadi kenyataan."
+                      <footer>- Tim artWeb</footer>
+                    </blockquote>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <style>
-              /* Promo Badge Styling */
-              .promo-badge {
-                background: linear-gradient(135deg, #6a11cb, #2575fc);
-                color: white;
-                padding: 20px;
-                border-radius: 15px;
-                text-align: center;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                border: 2px solid rgba(255, 255, 255, 0.2);
-                max-width: 250px;
-                animation: float 3s ease-in-out infinite;
-                position: relative; /* Untuk posisi tombol close */
-              }
-            
-              .promo-badge h3 {
-                font-size: 24px;
-                margin-bottom: 15px;
-                font-weight: bold;
-                text-transform: uppercase;
-                color: #f8f9fa;
-              }
-            
-              .promo-badge p {
-                font-size: 16px;
-                margin: 10px 0;
-                line-height: 1.4;
-              }
-            
-              .promo-badge p strong {
-                color: #ffeb3b;
-              }
-            
-              .promo-badge .highlight {
-                font-size: 14px;
-                font-style: italic;
-                color: #ffeb3b;
-                margin-top: 15px;
-              }
-            
-              .close-btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 20px;
-                cursor: pointer;
-                transition: color 0.3s ease;
-              }
-            
-              .close-btn:hover {
-                color: #ffeb3b; /* Warna kuning saat dihover */
-              }
-            
-              @keyframes float {
-                0%, 100% {
-                  transform: translateY(0);
+              
+              <style>
+                /* Warna Utama dan Pendukung */
+                :root {
+                  --primary-color: rgb(13, 131, 254); /* Warna utama */
+                  --secondary-color: rgba(13, 131, 254, 0.8); /* Warna sekunder dengan opacity */
+                  --accent-color: rgb(13, 131, 254); /* Warna utama */
+                  --text-color: #2c3e50; /* Warna teks utama */
+                  --text-light: #555; /* Warna teks sekunder */
+                  --background-light: rgba(255, 255, 255, 0.9); /* Background konten */
                 }
-                50% {
+              
+                /* Konten Menarik Styling */
+                .content-wrapper {
+                  text-align: center;
+                  padding: 40px;
+                  background: var(--background-light);
+                  border-radius: 15px;
+                  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                }
+              
+                .animated-text {
+                  margin-bottom: 40px;
+                }
+              
+                .text-gradient {
+                  font-size: 32px;
+                  font-weight: 700;
+                  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  animation: fadeIn 2s ease-in-out;
+                }
+              
+                .text-subtitle {
+                  font-size: 18px;
+                  color: var(--text-light);
+                  margin-top: 10px;
+                }
+              
+                .interactive-icons {
+                  display: flex;
+                  justify-content: space-around;
+                  gap: 20px;
+                  margin-bottom: 40px;
+                }
+              
+                .icon-item {
+                  text-align: center;
+                  transition: transform 0.3s ease;
+                }
+              
+                .icon-item:hover {
                   transform: translateY(-10px);
                 }
-              }
-            
-              .floating {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 1000;
-              }
-            
-              /* Media Query untuk menyembunyikan gambar di layar < 1100px */
-              @media (max-width: 1099.98px) {
-                .images {
-                  display: none !important; /* Pastikan gambar tidak muncul */
+              
+                .icon-large {
+                  font-size: 40px;
+                  color: var(--primary-color);
+                  margin-bottom: 10px;
                 }
-              }
-            
-              /* Media Query untuk menampilkan gambar di layar >= 1100px */
-              @media (min-width: 1100px) {
-                .images {
-                  display: block; /* Tampilkan gambar */
+              
+                .icon-item p {
+                  font-size: 16px;
+                  color: var(--text-light);
+                  margin-top: 10px;
                 }
-              }
-            </style>
-            
-            <script>
-              function closePromo() {
-                const promoBadge = document.querySelector('.promo-badge');
-                promoBadge.style.display = 'none'; // Menyembunyikan badge saat tombol close diklik
-              }
-            </script>
+              
+                .inspirational-quote blockquote {
+                  font-size: 20px;
+                  font-style: italic;
+                  color: var(--text-color);
+                  margin: 0;
+                }
+              
+                .inspirational-quote footer {
+                  font-size: 16px;
+                  color: var(--primary-color);
+                  margin-top: 10px;
+                  font-weight: 600;
+                }
+              
+                /* Animasi */
+                @keyframes fadeIn {
+                  0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+              
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                  .text-gradient {
+                    font-size: 28px;
+                  }
+              
+                  .text-subtitle {
+                    font-size: 16px;
+                  }
+              
+                  .interactive-icons {
+                    flex-direction: column;
+                  }
+              
+                  .icon-item {
+                    margin-bottom: 20px;
+                  }
+              
+                  .inspirational-quote blockquote {
+                    font-size: 18px;
+                  }
+              
+                  .inspirational-quote footer {
+                    font-size: 14px;
+                  }
+                }
+              </style>
+              <div class="promo-badge floating">
+                <button class="close-btn" onclick="closePromo()">×</button><br>
+                <h3>Promo Spesial!</h3>
+                <p>🔥 Konsultasi <strong>GRATIS</strong>!</p>
+                <p>✨ Revisi <strong>SEPUASNYA</strong>!</p>
+                <p>💸 Harga Bisa di <strong>NEGO</strong></p>
+                <p class="highlight">Jangan lewatkan kesempatan ini!</p>
+              </div>
+              
+              <style>
+                .promo-badge {
+                  background: linear-gradient(135deg, #6a11cb, #2575fc);
+                  color: white;
+                  padding: 20px;
+                  border-radius: 15px;
+                  text-align: center;
+                  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  max-width: 250px;
+                  animation: float 3s ease-in-out infinite;
+                  position: relative; /* Untuk posisi tombol close */
+                }
+              
+                .promo-badge h3 {
+                  font-size: 24px;
+                  margin-bottom: 15px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  color: #f8f9fa;
+                }
+              
+                .promo-badge p {
+                  font-size: 16px;
+                  margin: 10px 0;
+                  line-height: 1.4;
+                }
+              
+                .promo-badge p strong {
+                  color: #ffeb3b;
+                }
+              
+                .promo-badge .highlight {
+                  font-size: 14px;
+                  font-style: italic;
+                  color: #ffeb3b;
+                  margin-top: 15px;
+                }
+              
+                .close-btn {
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  background: none;
+                  border: none;
+                  color: white;
+                  font-size: 20px;
+                  cursor: pointer;
+                  transition: color 0.3s ease;
+                }
+              
+                .close-btn:hover {
+                  color: #ffeb3b; /* Warna kuning saat dihover */
+                }
+              
+                @keyframes float {
+                  0%, 100% {
+                    transform: translateY(0);
+                  }
+                  50% {
+                    transform: translateY(-10px);
+                  }
+                }
+              
+                .floating {
+                  position: fixed;
+                  bottom: 20px;
+                  right: 20px;
+                  z-index: 1000;
+                }
+              </style>
+              
+              <script>
+                function closePromo() {
+                  const promoBadge = document.querySelector('.promo-badge');
+                  promoBadge.style.display = 'none'; // Menyembunyikan badge saat tombol close diklik
+                }
+              </script>
+            </div>
           </div>
         </div>
 
@@ -974,75 +1100,188 @@
    
 
     <!-- Portfolio Section -->
-    <section id="services" class="services section light-background">
+<section id="portfolio" class="portfolio section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Berbagai proyek yang telah kami kerjakan dengan kualitas terbaik dan desain modern</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Berbagai proyek yang telah kami kerjakan dengan kualitas terbaik dan desain modern</p>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-4">
+    <div class="row g-4">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-window"></i>
-              </div>
-              <div>
-                <h3>Website Company Profile</h3>
-                <p>Pembuatan website company profile profesional untuk meningkatkan kredibilitas bisnis Anda.</p>
-                <a href="carwashecommerce.html" class="read-more">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-              </div>
+      <!-- Portfolio Card 1 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/img/porto/carwash/1.jpg" alt="Website Company Profile" class="img-fluid">
+            <div class="overlay">
+              <a href="carwashecommerce.html" class="btn btn-view">Lihat Detail <i class="bi bi-arrow-right"></i></a>
             </div>
-          </div><!-- End Portfolio Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-cart"></i>
-              </div>
-              <div>
-                <h3>Toko Online (E-Commerce)</h3>
-                <p>Pembuatan toko online yang responsif dan user-friendly untuk meningkatkan penjualan Anda.</p>
-                <a href="portfolio-details.html" class="read-more">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-speedometer2"></i>
-              </div>
-              <div>
-                <h3>Landing Page</h3>
-                <p>Desain landing page yang menarik dan interaktif untuk meningkatkan konversi bisnis Anda.</p>
-                <a href="portfolio-details.html" class="read-more">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <div>
-                <h3>Sistem Informasi</h3>
-                <p>Pembuatan sistem informasi berbasis web yang membantu meningkatkan efisiensi bisnis Anda.</p>
-                <a href="portfolio-details.html" class="read-more">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Card -->
-
+          </div>
+          <div class="portfolio-content">
+            <h3>Website Company Profile</h3>
+            <p>Pembuatan website company profile profesional untuk meningkatkan kredibilitas bisnis Anda.</p>
+          </div>
         </div>
+      </div><!-- End Portfolio Card 1 -->
 
-      </div>
+      <!-- Portfolio Card 2 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/img/porto/carwash/1.jpg" alt="Toko Online (E-Commerce)" class="img-fluid">
+            <div class="overlay">
+              <a href="portfolio-details.html" class="btn btn-view">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Toko Online (E-Commerce)</h3>
+            <p>Pembuatan toko online yang responsif dan user-friendly untuk meningkatkan penjualan Anda.</p>
+          </div>
+        </div>
+      </div><!-- End Portfolio Card 2 -->
 
-    </section><!-- /Portfolio Section -->
+      <!-- Portfolio Card 3 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/img/porto/carwash/1.jpg" alt="Landing Page" class="img-fluid">
+            <div class="overlay">
+              <a href="portfolio-details.html" class="btn btn-view">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Landing Page</h3>
+            <p>Desain landing page yang menarik dan interaktif untuk meningkatkan konversi bisnis Anda.</p>
+          </div>
+        </div>
+      </div><!-- End Portfolio Card 3 -->
+
+      <!-- Portfolio Card 4 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/img/porto/carwash/1.jpg" alt="Sistem Informasi" class="img-fluid">
+            <div class="overlay">
+              <a href="portfolio-details.html" class="btn btn-view">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Sistem Informasi</h3>
+            <p>Pembuatan sistem informasi berbasis web yang membantu meningkatkan efisiensi bisnis Anda.</p>
+          </div>
+        </div>
+      </div><!-- End Portfolio Card 4 -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Section -->
+
+<style>
+  /* Portfolio Section Styling */
+  .portfolio {
+    padding: 80px 0;
+  }
+
+  .portfolio-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .portfolio-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-card:hover .portfolio-image img {
+    transform: scale(1.1);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 131, 254, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .portfolio-card:hover .overlay {
+    opacity: 1;
+  }
+
+  .btn-view {
+    background: white;
+    color: rgb(13, 131, 254);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-view:hover {
+    background: rgb(13, 131, 254);
+    color: white;
+  }
+
+  .portfolio-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .portfolio-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .portfolio-card {
+      margin-bottom: 20px;
+    }
+
+    .portfolio-content h3 {
+      font-size: 18px;
+    }
+
+    .portfolio-content p {
+      font-size: 13px;
+    }
+  }
+</style>
 
 
   
