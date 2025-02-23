@@ -177,10 +177,92 @@
                 <img src="assets/img/wm.png" alt="Tim artWeb" class="img-fluid main-image rounded-4">
                 <img src="assets/img/favicon.png" alt="Diskusi Tim" class="img-fluid small-image rounded-4">
               </div>
-              <div class="experience-badge floating">
-                <h3>3+ <span>Tahun</span></h3>
-                <p>Pengalaman dalam pengembangan website</p>
+              <div class="promo-badge floating">
+                <button class="close-btn" onclick="closePromo()">×</button>
+                <h3>Promo Spesial!</h3>
+                <p>🔥 Konsultasi <strong>GRATIS</strong>!</p>
+                <p>✨ Revisi <strong>SEPUASNYA</strong>!</p>
+                <p>💸 Harga Bisa di <strong>NEGO</strong></p>
+                <p class="highlight">Jangan lewatkan kesempatan ini!</p>
               </div>
+              
+              <style>
+                .promo-badge {
+                  background: linear-gradient(135deg, #6a11cb, #2575fc);
+                  color: white;
+                  padding: 20px;
+                  border-radius: 15px;
+                  text-align: center;
+                  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  max-width: 250px;
+                  animation: float 3s ease-in-out infinite;
+                  position: relative; /* Untuk posisi tombol close */
+                }
+              
+                .promo-badge h3 {
+                  font-size: 24px;
+                  margin-bottom: 15px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
+              
+                .promo-badge p {
+                  font-size: 16px;
+                  margin: 10px 0;
+                  line-height: 1.4;
+                }
+              
+                .promo-badge p strong {
+                  color: #ffeb3b;
+                }
+              
+                .promo-badge .highlight {
+                  font-size: 14px;
+                  font-style: italic;
+                  color: #ffeb3b;
+                  margin-top: 15px;
+                }
+              
+                .close-btn {
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  background: none;
+                  border: none;
+                  color: white;
+                  font-size: 20px;
+                  cursor: pointer;
+                  transition: color 0.3s ease;
+                }
+              
+                .close-btn:hover {
+                  color: #ffeb3b; /* Warna kuning saat dihover */
+                }
+              
+                @keyframes float {
+                  0%, 100% {
+                    transform: translateY(0);
+                  }
+                  50% {
+                    transform: translateY(-10px);
+                  }
+                }
+              
+                .floating {
+                  position: fixed;
+                  bottom: 20px;
+                  right: 20px;
+                  z-index: 1000;
+                }
+              </style>
+              
+              <script>
+                function closePromo() {
+                  const promoBadge = document.querySelector('.promo-badge');
+                  promoBadge.style.display = 'none'; // Menyembunyikan badge saat tombol close diklik
+                }
+              </script>
             </div>
           </div>
         </div>
@@ -443,128 +525,223 @@
     </section><!-- /Features 2 Section -->
 
       <!-- Pricing Section -->
-      <section id="pricing" class="pricing section light-background">
+<!-- Pricing Section -->
+<section id="pricing" class="pricing section light-background">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Harga</h2>
-          <p>Pilih paket yang sesuai dengan kebutuhan bisnis Anda dan dapatkan website profesional dengan fitur terbaik.</p>
-        </div><!-- End Section Title -->
-  
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-  
-          <div class="row g-4 justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-4">
-  
-            <!-- Basic Plan -->
-            <div class="col" data-aos="fade-up" data-aos-delay="100">
-              <div class="pricing-card">
-                <h3>Paket Basic</h3>
-                <div class="price">
-                  <span class="currency">Rp</span>
-                  <span class="amount">450K</span>
-                </div>
-                <p class="description">Cocok untuk bisnis kecil atau personal yang membutuhkan website sederhana namun profesional.</p>
-  
-                <h4>Fitur Termasuk:</h4>
-                <ul class="features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Desain responsif & modern</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 1 Halaman website (Landing Page)</li>
-                  <li><i class="bi bi-check-circle-fill"></i> SEO dasar</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Hosting & domain gratis 1 tahun</li>
-                </ul>
-  
-                <a href="#" class="btn btn-primary">
-                  Pesan Sekarang
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-  
-            <!-- Pro Plan -->
-            <div class="col" data-aos="fade-up" data-aos-delay="200">
-              <div class="pricing-card popular">
-                <div class="popular-badge">Paling Populer</div>
-                <h3>Paket Pro</h3>
-                <div class="price">
-                  <span class="currency">Rp</span>
-                  <span class="amount">1.500K</span>
-                </div>
-                <p class="description">Pilihan terbaik untuk bisnis yang membutuhkan website lebih lengkap dengan fitur tambahan.</p>
-  
-                <h4>Fitur Termasuk:</h4>
-                <ul class="features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Desain custom & responsif</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 5 Halaman website</li>
-                  <li><i class="bi bi-check-circle-fill"></i> SEO tingkat lanjut</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Integrasi sosial media & chat</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Hosting & domain gratis 1 tahun</li>
-                </ul>
-  
-                <a href="#" class="btn btn-light">
-                  Pesan Sekarang
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-  
-            <!-- Premium Plan -->
-            <div class="col" data-aos="fade-up" data-aos-delay="300">
-              <div class="pricing-card">
-                <h3>Paket Premium</h3>
-                <div class="price">
-                  <span class="currency">Rp</span>
-                  <span class="amount">2.500K</span>
-                </div>
-                <p class="description">Solusi terbaik untuk perusahaan atau bisnis besar yang membutuhkan website lengkap dengan fitur eksklusif.</p>
-  
-                <h4>Fitur Termasuk:</h4>
-                <ul class="features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Desain eksklusif & branding</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 10+ Halaman website</li>
-                  <li><i class="bi bi-check-circle-fill"></i> SEO premium & optimasi performa</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Fitur e-commerce</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Support & maintenance selama 1 tahun</li>
-                </ul>
-  
-                <a href="#" class="btn btn-primary">
-                  Pesan Sekarang
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-  
-            <!-- Custom Plan -->
-            <div class="col" data-aos="fade-up" data-aos-delay="400">
-              <div class="pricing-card custom-highlight">
-                <h3>Paket Custom</h3>
-                <div class="price">
-                  <span class="currency">Rp -</span>
-                  <span class="amount"></span>
-                </div>
-                <p class="description">Cocok untuk pelajar, mahasiswa, atau kebutuhan khusus seperti joki praktikum dan proyek akademik.</p>
-  
-                <h4>Fitur Termasuk:</h4>
-                <ul class="features-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Pembuatan web sederhana untuk tugas kuliah</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Joki praktikum pemrograman & webt</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Implementasi fitur sesuai kebutuhan</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Harga menyesuaikan kompleksitas</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Konsultasi gratis sebelum pemesanan</li>
-                </ul>
-  
-                <a href="#" class="btn btn-primary">
-                  Konsultasi Sekarang
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-  
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Harga</h2>
+    <p>Pilih paket yang sesuai dengan kebutuhan bisnis Anda dan dapatkan website profesional dengan fitur terbaik.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-4 justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+      <!-- Basic Plan -->
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-card">
+          <h3>Paket Basic</h3>
+          <div class="price">
+            <span class="currency">Rp</span>
+            <span class="amount">450K</span>
           </div>
-  
-        </div>
-  
-      </section><!-- /Pricing Section -->
+          <p class="description">UMKM / Personal branding profesional, dll.</p>
 
+          <h4>Fitur Termasuk:</h4>
+          <ul class="features-list">
+            <li><i class="bi bi-check-circle-fill"></i> 1 Halaman (Landing Page)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Desain Responsif & Profesional</li>
+            <li><i class="bi bi-check-circle-fill"></i> Domain & hosting gratis (1 tahun)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Form kontak</li>
+            <li><i class="bi bi-check-circle-fill"></i> SEO dasar</li>
+          </ul>
+          <!-- Button untuk menampilkan/sembunyikan fitur tambahan -->
+          <button class="btn btn-detail" onclick="toggleDetails('basic')">Detail <i class="bi bi-chevron-down"></i></button>
+          <!-- Fitur tambahan yang disembunyikan -->
+          <ul class="features-list more-features" id="basic-more" style="display: none;">
+            <br>
+            <li><i class="bi bi-check-circle-fill"></i> Waktu pengerjaan 1 - 2 hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free konsultasi</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free revisi sampai final</li>
+            <li><i class="bi bi-check-circle-fill"></i> Booklet demo/tutorial</li>
+            <li><i class="bi bi-check-circle-fill"></i> Harga nego: Tidak</li>
+          </ul>
+
+          
+        </div>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-card popular">
+          <div class="popular-badge">Paling Populer</div>
+          <h3>Paket Pro</h3>
+          <div class="price">
+            <span class="currency">Rp</span>
+            <span class="amount">1.000K</span>
+          </div>
+          <p class="description">Ideal untuk bisnis dengan fitur lebih lengkap</p>
+
+          <h4>Fitur Termasuk:</h4>
+          <ul class="features-list">
+            <li><i class="bi bi-check-circle-fill"></i> 3-6 Halaman Request</li>
+            <li><i class="bi bi-check-circle-fill"></i> Desain lebih profesional & responsif</li>
+            <li><i class="bi bi-check-circle-fill"></i> Domain & hosting gratis (1 tahun)</li>
+            <li><i class="bi bi-check-circle-fill"></i> 6 Request Form</li>
+            <li><i class="bi bi-check-circle-fill"></i> SEO dasar</li>
+          </ul>
+          <!-- Button untuk menampilkan/sembunyikan fitur tambahan -->
+          <button class="btn btn-detail" onclick="toggleDetails('pro')">Detail <i class="bi bi-chevron-down"></i></button>
+          <!-- Fitur tambahan yang disembunyikan -->
+          <ul class="features-list more-features" id="pro-more" style="display: none;">
+            <br>
+            <li><i class="bi bi-check-circle-fill"></i> Waktu pengerjaan 3 - 4 hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free konsultasi</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free revisi sampai final</li>
+            <li><i class="bi bi-check-circle-fill"></i> Booklet demo/tutorial</li>
+            <li><i class="bi bi-check-circle-fill"></i> Harga nego: Ya</li>
+          </ul>
+
+         
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col" data-aos="fade-up" data-aos-delay="300">
+        <div class="pricing-card">
+          <h3>Paket Premium</h3>
+          <div class="price">
+            <span class="currency">Rp</span>
+            <span class="amount">2.000K</span>
+          </div>
+          <p class="description">Pilihan untuk perusahaan dengan fitur eksklusif.</p>
+
+          <h4>Fitur Termasuk:</h4>
+          <ul class="features-list">
+            <li><i class="bi bi-check-circle-fill"></i> Website lengkap & eksklusif</li>
+            <li><i class="bi bi-check-circle-fill"></i> Desain premium & Kustom Desain</li>
+            <li><i class="bi bi-check-circle-fill"></i> Domain & hosting gratis (1 tahun)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Unlimited Requst Form</li>
+            <li><i class="bi bi-check-circle-fill"></i> SEO lanjutan</li>
+          </ul>
+          <!-- Button untuk menampilkan/sembunyikan fitur tambahan -->
+          <button class="btn btn-detail" onclick="toggleDetails('premium')">Detail <i class="bi bi-chevron-down"></i></button>
+          <!-- Fitur tambahan yang disembunyikan -->
+          <ul class="features-list more-features" id="premium-more" style="display: none;">
+            <br>
+            <li><i class="bi bi-check-circle-fill"></i> CMS (WordPress/custom) untuk edit konten sendiri</li>
+            <li><i class="bi bi-check-circle-fill"></i> Integrasi pembayaran (jika e-commerce)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Waktu pengerjaan 3 - 5 hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free konsultasi</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free revisi sampai final</li>
+            <li><i class="bi bi-check-circle-fill"></i> Booklet demo/tutorial</li>
+            <li><i class="bi bi-check-circle-fill"></i> Harga nego: Ya</li>
+          </ul>
+
+        
+        </div>
+      </div>
+
+      <!-- Custom Plan -->
+      <div class="col" data-aos="fade-up" data-aos-delay="400">
+        <div class="pricing-card custom-highlight">
+          <h3>Paket Custom</h3>
+          <div class="price">
+            <span class="currency">Rp -</span>
+            <span class="amount"></span>
+          </div>
+          <p class="description">Rekomendasi Untuk pelajar hingga proyek kompleks.</p>
+
+          <h4>Fitur Termasuk:</h4>
+          <ul class="features-list">
+            <li><i class="bi bi-check-circle-fill"></i> Kustom Desain & Fitur</li>
+            <li><i class="bi bi-check-circle-fill"></i> Pelajar atau sistem kompleks tertentu</li>
+            <li><i class="bi bi-check-circle-fill"></i> Request tech : WordPress, Laravel, React, dll.</li>
+            <li><i class="bi bi-check-circle-fill"></i> Revisi sesuai kesepakatan</li>
+            <li><i class="bi bi-check-circle-fill"></i> Waktu pengerjaan fleksibel</li>
+          </ul>
+          <!-- Button untuk menampilkan/sembunyikan fitur tambahan -->
+          <button class="btn btn-detail" onclick="toggleDetails('custom')">Detail <i class="bi bi-chevron-down"></i></button>
+          <!-- Fitur tambahan yang disembunyikan -->
+          <ul class="features-list more-features" id="custom-more" style="display: none;">
+            <br>
+            <li><i class="bi bi-check-circle-fill"></i> Free konsultasi</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free revisi sampai final</li>
+            <li><i class="bi bi-check-circle-fill"></i> Booklet demo/tutorial</li>
+            <li><i class="bi bi-check-circle-fill"></i> Harga nego: Ya</li>
+          </ul>
+
+       
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+<style>
+  .btn-detail {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-detail:hover {
+    background-color: #e9ecef;
+  }
+
+  .more-features {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+  margin: 0;
+    padding: 0;
+  }
+
+  .more-features.show {
+    max-height: 500px; /* Adjust based on your content */
+  }
+</style>
+
+<script>
+  function toggleDetails(plan) {
+    const moreFeatures = document.getElementById(`${plan}-more`);
+    const allMoreFeatures = document.querySelectorAll('.more-features');
+    const allButtons = document.querySelectorAll('.btn-detail');
+
+    // Hide all other details
+    allMoreFeatures.forEach(feature => {
+      if (feature.id !== `${plan}-more`) {
+        feature.classList.remove('show');
+        feature.style.display = 'none';
+      }
+    });
+
+    // Toggle the clicked detail
+    if (moreFeatures.style.display === "none" || moreFeatures.style.display === "") {
+      moreFeatures.style.display = "block";
+      moreFeatures.classList.add('show');
+      document.querySelector(`[onclick="toggleDetails('${plan}')"]`).innerHTML = `Sembunyikan <i class="bi bi-chevron-up"></i>`;
+    } else {
+      moreFeatures.style.display = "none";
+      moreFeatures.classList.remove('show');
+      document.querySelector(`[onclick="toggleDetails('${plan}')"]`).innerHTML = `Detail <i class="bi bi-chevron-down"></i>`;
+    }
+
+    // Reset other buttons
+    allButtons.forEach(button => {
+      if (button.getAttribute('onclick') !== `toggleDetails('${plan}')`) {
+        button.innerHTML = `Detail <i class="bi bi-chevron-down"></i>`;
+      }
+    });
+  }
+</script>
       <style>
         .custom-highlight {
           border: 2px solid #ff9800;
