@@ -100,10 +100,10 @@
 
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary me-0 me-sm-2 mx-1">Pesan Sekarang</a>
-            <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+            <a href="https://app.supademo.com/demo/cm7i8ksdj09x7bnhn95qczefh" class="btn btn-link mt-2 mt-sm-0 glightbox">
               <i class="bi bi-play-circle me-1"></i>
               Lihat Demo
-            </a> -->
+            </a>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
                     <i class="bi bi-telephone-fill"></i>
                     <div>
                       <p class="contact-label">Kontak kami</p>
-                      <p class="contact-number">+62 815-7363-5143</p>
+                      <p class="contact-number">+62 878-2195-7335</p>
                     </div>
                   </div>
                 </div>
@@ -598,7 +598,6 @@
     </section>
     <!-- /Features Cards Section -->
 
-
    
  <!-- Features 2 Section -->
 <section id="features-2" class="features-2 section">
@@ -651,7 +650,7 @@
       <!-- Gambar Mockup -->
       <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="phone-mockup text-center">
-          <img src="assets/img/android.png" alt="Phone Mockup" class="img-fluid">
+          <img src="assets/img/image.png" alt="Phone Mockup" class="img-fluid">
         </div>
       </div><!-- End Phone Mockup -->
 
@@ -1088,61 +1087,119 @@
           </div>
 
           <div class="col-lg-7">
-              <!-- Contact Form Section -->
-              <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-                <h3>Pemesanan Langsung</h3>
-                <p>Isi formulir di bawah ini untuk memesan layanan kami dan langsung terhubung melalui WhatsApp.</p>
-
-                <form id="orderForm">
-                  <div class="row gy-4">
-
-                    <div class="col-md-6">
-                      <input type="text" id="name" class="form-control" placeholder="Nama Anda" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <select id="package" class="form-control" required>
-                        <option value="">Pilih Paket</option>
-                        <option value="Basic">Basic</option>
-                        <option value="Pro">Pro</option>
-                        <option value="Premium">Premium</option>
-                      </select>
-                    </div>
-
-                    <div class="col-12">
-                      <input type="text" id="business" class="form-control" placeholder="Nama Usaha" required>
-                    </div>
-
-                    <div class="col-12">
-                      <textarea id="notes" class="form-control" rows="6" placeholder="Catatan Tambahan"></textarea>
-                    </div>
-
-                    <div class="col-12 text-center">
-                      <button type="button" class="btn" onclick="sendToWhatsApp()">Send Message</button>
-                    </div>
-
+            <!-- Contact Form Section -->
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Pemesanan Langsung</h3>
+              <p>Isi formulir di bawah ini untuk memesan layanan kami dan langsung terhubung melalui WhatsApp.</p>
+          
+              <form id="orderForm">
+                <div class="row gy-4">
+          
+                  <!-- Nama -->
+                  <div class="col-md-6">
+                    <input type="text" id="name" class="form-control" placeholder="Nama Anda" required>
                   </div>
-                </form>
-              </div>
-
-              <script>
-                function sendToWhatsApp() {
-                  var name = document.getElementById("name").value;
-                  var package = document.getElementById("package").value;
-                  var business = document.getElementById("business").value;
-                  var notes = document.getElementById("notes").value;
-              
-                  var message = `Halo artWeb, saya ${name}.\n\n` +
-                                `Saya ingin memesan Paket *_${package}_* untuk usaha ${business}.\n\n` +
-                                (notes ? `*Catatan:* \n${notes}` : "");
-              
-                  var whatsappURL = `https://wa.me/6287821957335?text=${encodeURIComponent(message)}`;
-                  window.open(whatsappURL, "_blank");
-                }
-              </script>
-              
-
+          
+                  <!-- Paket -->
+                  <div class="col-md-6">
+                    <select id="package" class="form-control custom-select" required>
+                      <option value="">Pilih Paket</option>
+                      <option value="Basic">Basic</option>
+                      <option value="Pro">Pro</option>
+                      <option value="Premium">Premium</option>
+                      <option value="Custom">Custom</option> <!-- Paket Custom -->
+                    </select>
+                  </div>
+          
+                  <!-- Nama Usaha -->
+                  <div class="col-12">
+                    <input type="text" id="business" class="form-control" placeholder="Nama Usaha" required>
+                  </div>
+          
+                  <!-- Catatan Tambahan -->
+                  <div class="col-12">
+                    <textarea id="notes" class="form-control" rows="6" placeholder="Catatan Tambahan"></textarea>
+                  </div>
+          
+                  <!-- Tombol Kirim -->
+                  <div class="col-12 text-center">
+                    <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()">Send Message</button>
+                  </div>
+          
+                </div>
+              </form>
+            </div>
           </div>
+          
+          <!-- CSS untuk Mempercantik Formulir -->
+          <style>
+            /* Style untuk Formulir */
+            .contact-form {
+              background: #f9f9f9;
+              padding: 30px;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .contact-form h3 {
+              font-size: 1.5rem;
+              margin-bottom: 15px;
+              color: #333;
+            }
+            .contact-form p {
+              font-size: 0.9rem;
+              color: #666;
+              margin-bottom: 20px;
+            }
+            .form-control {
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+              font-size: 0.9rem;
+              margin-bottom: 15px;
+              transition: border-color 0.3s ease;
+            }
+            .form-control:focus {
+              border-color: #0d6efd;
+              outline: none;
+            }
+            .custom-select {
+              appearance: none;
+              background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 10px center;
+              background-size: 15px;
+              padding-right: 30px;
+            }
+            .btn-primary {
+              background: #0d6efd;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              font-size: 0.9rem;
+              cursor: pointer;
+              transition: background 0.3s ease;
+            }
+            .btn-primary:hover {
+              background: #0b5ed7;
+            }
+          </style>
+          
+          <!-- JavaScript untuk Mengirim Pesan ke WhatsApp -->
+          <script>
+            function sendToWhatsApp() {
+              var name = document.getElementById("name").value;
+              var package = document.getElementById("package").value;
+              var business = document.getElementById("business").value;
+              var notes = document.getElementById("notes").value;
+          
+              var message = `Halo artWeb, saya ${name}.\n\n` +
+                            `Saya ingin memesan Paket *_${package}_* untuk usaha ${business}.\n\n` +
+                            (notes ? `*Catatan:* \n${notes}` : "");
+          
+              var whatsappURL = `https://wa.me/6287821957335?text=${encodeURIComponent(message)}`;
+              window.open(whatsappURL, "_blank");
+            }
+          </script>
 
         </div>
 
@@ -1150,7 +1207,7 @@
 
     </section><!-- /Contact Section -->
 
- <!-- Testimonials Section -->
+<!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section light-background">
 
   <!-- Section Title -->
@@ -1160,77 +1217,154 @@
   </div><!-- End Section Title -->
 
   <div class="container">
-    <div class="row g-5">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- Testimonial Item 1 -->
+            <div class="col-md-6">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/chels.jpg" class="testimonial-img" alt="">
+                <h3>Chelsea</h3>
+                <h4>International Community Student</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Website profil yang dibuat oleh artWeb sangat membantu saya dalam membangun personal branding. Desainnya modern, profesional, dan mudah digunakan. Saya sangat puas dengan hasilnya!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-item">
-          <img src="assets/img/testimonials/chels.jpg" class="testimonial-img" alt="">
-          <h3>Chelsea</h3>
-          <h4>International Community Student</h4>
-          <div class="stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <!-- Testimonial Item 2 -->
+            <div class="col-md-6">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/jos.jpg" class="testimonial-img" alt="">
+                <h3>Joshua</h3>
+                <h4>Elektromedik</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Saya memesan website untuk tugas akhir, yaitu sistem inventaris alat rumah sakit. Hasilnya sangat memuaskan! Fitur-fiturnya lengkap dan sistem berjalan dengan baik sesuai kebutuhan saya.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
           </div>
-          <p>
-            <i class="bi bi-quote quote-icon-left"></i>
-            <span>Website profil yang dibuat oleh artWeb sangat membantu saya dalam membangun personal branding. Desainnya modern, profesional, dan mudah digunakan. Saya sangat puas dengan hasilnya!</span>
-            <i class="bi bi-quote quote-icon-right"></i>
-          </p>
-        </div>
-      </div><!-- End testimonial item -->
+        </div><!-- End Slide 1 -->
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="testimonial-item">
-          <img src="assets/img/testimonials/jos.jpg" class="testimonial-img" alt="">
-          <h3>Joshua</h3>
-          <h4>Elektromedik</h4>
-          <div class="stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <!-- Testimonial Item 3 -->
+            <div class="col-md-6">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/febri.jpg" class="testimonial-img" alt="">
+                <h3>Febri</h3>
+                <h4>Pengusaha</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Website untuk bisnis car wash saya dikerjakan dengan sangat profesional oleh artWeb. Tampilan menarik, mudah diakses pelanggan, dan fitur booking online sangat membantu. Terima kasih!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial Item 4 -->
+            <div class="col-md-6">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/dian.jpg" class="testimonial-img" alt="">
+                <h3>Dian</h3>
+                <h4>Teknik Sipil</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Website profil saya yang dibuat oleh artWeb sangat elegan dan sesuai dengan bidang teknik sipil yang saya geluti. Portofolio saya jadi lebih mudah diakses oleh klien dan rekan kerja.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
           </div>
-          <p>
-            <i class="bi bi-quote quote-icon-left"></i>
-            <span>Saya memesan website untuk tugas akhir, yaitu sistem inventaris alat rumah sakit. Hasilnya sangat memuaskan! Fitur-fiturnya lengkap dan sistem berjalan dengan baik sesuai kebutuhan saya.</span>
-            <i class="bi bi-quote quote-icon-right"></i>
-          </p>
-        </div>
-      </div><!-- End testimonial item -->
+        </div><!-- End Slide 2 -->
+      </div>
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="testimonial-item">
-          <img src="assets/img/testimonials/febri.jpg" class="testimonial-img" alt="">
-          <h3>Febri</h3>
-          <h4>Pengusaha</h4>
-          <div class="stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-          </div>
-          <p>
-            <i class="bi bi-quote quote-icon-left"></i>
-            <span>Website untuk bisnis car wash saya dikerjakan dengan sangat profesional oleh artWeb. Tampilan menarik, mudah diakses pelanggan, dan fitur booking online sangat membantu. Terima kasih!</span>
-            <i class="bi bi-quote quote-icon-right"></i>
-          </p>
-        </div>
-      </div><!-- End testimonial item -->
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="testimonial-item">
-          <img src="assets/img/testimonials/dian.jpg" class="testimonial-img" alt="">
-          <h3>Dian</h3>
-          <h4>Teknik Sipil</h4>
-          <div class="stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-          </div>
-          <p>
-            <i class="bi bi-quote quote-icon-left"></i>
-            <span>Website profil saya yang dibuat oleh artWeb sangat elegan dan sesuai dengan bidang teknik sipil yang saya geluti. Portofolio saya jadi lebih mudah diakses oleh klien dan rekan kerja.</span>
-            <i class="bi bi-quote quote-icon-right"></i>
-          </p>
-        </div>
-      </div><!-- End testimonial item -->
-
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 
 </section><!-- /Testimonials Section -->
 
+<!-- CSS untuk Mempercantik Tampilan Carousel -->
+<style>
+  .testimonial-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Jarak antar testimonial */
+  }
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  .stars {
+    color: #ffc107;
+    margin-bottom: 10px;
+  }
+  .quote-icon-left, .quote-icon-right {
+    color: #0d6efd;
+    font-size: 1.2rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Lebar tombol navigasi */
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .carousel-indicators {
+    margin-bottom: -30px; /* Posisi indikator lebih dekat ke testimonial */
+  }
+  .carousel-indicators button {
+    background-color: #0d6efd;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+  }
+  .carousel-indicators .active {
+    background-color: #6610f2;
+  }
+  .carousel-inner {
+    padding: 20px 0; /* Spasi atas dan bawah */
+  }
+</style>
 
    
 
@@ -1290,7 +1424,7 @@
           </div>
           <div class="portfolio-content">
             <h3>Sistem Belajar</h3>
-            <p>Website monitoring orang tua dan anak untuk memantau progres belajar anak.</p>
+            <p>Website monitoring orang tua dan anak untuk memantau progres belajar anak di sekolah.</p>
           </div>
         </div>
       </div><!-- End Portfolio Card 3 -->
@@ -1417,9 +1551,6 @@
     }
   }
 </style>
-
-
-  
 
 
   <!-- FAQ Section -->
