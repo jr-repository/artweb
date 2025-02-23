@@ -172,98 +172,119 @@
           </div>
 
           <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="image-wrapper">
-              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                <img src="assets/img/wm.png" alt="Tim artWeb" class="img-fluid main-image rounded-4">
-                <img src="assets/img/favicon.png" alt="Diskusi Tim" class="img-fluid small-image rounded-4">
+            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="image-wrapper">
+                <!-- Gambar hanya muncul di layar dengan lebar 1100px ke atas -->
+                <div class="images position-relative d-none d-xl-block" data-aos="zoom-out" data-aos-delay="400">
+                  <img src="assets/img/wm.png" alt="Tim artWeb" class="img-fluid main-image rounded-4">
+                  <img src="assets/img/favicon.png" alt="Diskusi Tim" class="img-fluid small-image rounded-4">
+                </div>
+            
+                <!-- Promo Badge -->
+                <div class="promo-badge floating">
+                  <button class="close-btn" onclick="closePromo()">×</button><br>
+                  <h3>Promo Spesial!</h3>
+                  <p>🔥 Konsultasi <strong>GRATIS</strong>!</p>
+                  <p>✨ Revisi <strong>SEPUASNYA</strong>!</p>
+                  <p>💸 Harga Bisa di <strong>NEGO</strong></p>
+                  <p class="highlight">Jangan lewatkan kesempatan ini!</p>
+                </div>
               </div>
-              <div class="promo-badge floating">
-                <button class="close-btn" onclick="closePromo()">×</button>
-                <h3>Promo Spesial!</h3>
-                <p>🔥 Konsultasi <strong>GRATIS</strong>!</p>
-                <p>✨ Revisi <strong>SEPUASNYA</strong>!</p>
-                <p>💸 Harga Bisa di <strong>NEGO</strong></p>
-                <p class="highlight">Jangan lewatkan kesempatan ini!</p>
-              </div>
-              
-              <style>
-                .promo-badge {
-                  background: linear-gradient(135deg, #6a11cb, #2575fc);
-                  color: white;
-                  padding: 20px;
-                  border-radius: 15px;
-                  text-align: center;
-                  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                  border: 2px solid rgba(255, 255, 255, 0.2);
-                  max-width: 250px;
-                  animation: float 3s ease-in-out infinite;
-                  position: relative; /* Untuk posisi tombol close */
-                }
-              
-                .promo-badge h3 {
-                  font-size: 24px;
-                  margin-bottom: 15px;
-                  font-weight: bold;
-                  text-transform: uppercase;
-                }
-              
-                .promo-badge p {
-                  font-size: 16px;
-                  margin: 10px 0;
-                  line-height: 1.4;
-                }
-              
-                .promo-badge p strong {
-                  color: #ffeb3b;
-                }
-              
-                .promo-badge .highlight {
-                  font-size: 14px;
-                  font-style: italic;
-                  color: #ffeb3b;
-                  margin-top: 15px;
-                }
-              
-                .close-btn {
-                  position: absolute;
-                  top: 10px;
-                  right: 10px;
-                  background: none;
-                  border: none;
-                  color: white;
-                  font-size: 20px;
-                  cursor: pointer;
-                  transition: color 0.3s ease;
-                }
-              
-                .close-btn:hover {
-                  color: #ffeb3b; /* Warna kuning saat dihover */
-                }
-              
-                @keyframes float {
-                  0%, 100% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(-10px);
-                  }
-                }
-              
-                .floating {
-                  position: fixed;
-                  bottom: 20px;
-                  right: 20px;
-                  z-index: 1000;
-                }
-              </style>
-              
-              <script>
-                function closePromo() {
-                  const promoBadge = document.querySelector('.promo-badge');
-                  promoBadge.style.display = 'none'; // Menyembunyikan badge saat tombol close diklik
-                }
-              </script>
             </div>
+            
+            <style>
+              /* Promo Badge Styling */
+              .promo-badge {
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+                color: white;
+                padding: 20px;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                max-width: 250px;
+                animation: float 3s ease-in-out infinite;
+                position: relative; /* Untuk posisi tombol close */
+              }
+            
+              .promo-badge h3 {
+                font-size: 24px;
+                margin-bottom: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #f8f9fa;
+              }
+            
+              .promo-badge p {
+                font-size: 16px;
+                margin: 10px 0;
+                line-height: 1.4;
+              }
+            
+              .promo-badge p strong {
+                color: #ffeb3b;
+              }
+            
+              .promo-badge .highlight {
+                font-size: 14px;
+                font-style: italic;
+                color: #ffeb3b;
+                margin-top: 15px;
+              }
+            
+              .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+                transition: color 0.3s ease;
+              }
+            
+              .close-btn:hover {
+                color: #ffeb3b; /* Warna kuning saat dihover */
+              }
+            
+              @keyframes float {
+                0%, 100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+              }
+            
+              .floating {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+              }
+            
+              /* Media Query untuk menyembunyikan gambar di layar < 1100px */
+              @media (max-width: 1099.98px) {
+                .images {
+                  display: none !important; /* Pastikan gambar tidak muncul */
+                }
+              }
+            
+              /* Media Query untuk menampilkan gambar di layar >= 1100px */
+              @media (min-width: 1100px) {
+                .images {
+                  display: block; /* Tampilkan gambar */
+                }
+              }
+            </style>
+            
+            <script>
+              function closePromo() {
+                const promoBadge = document.querySelector('.promo-badge');
+                promoBadge.style.display = 'none'; // Menyembunyikan badge saat tombol close diklik
+              }
+            </script>
           </div>
         </div>
 
